@@ -30,7 +30,9 @@
 
   - name: install dependencies
     ansible.builtin.pip:
-      requirements: /app/requirements.txt
+      requirements: requirements.txt
+      args:
+       chdir: /app
 
   - name: set the payment server
     ansible.builtin.copy:
