@@ -1,10 +1,10 @@
-- name: configure paymenet server
+- name: configure payment server
   become: yes
   hosts:
   tasks:
   - name: install python
     ansible.builtin.pip:
-     name: python3-devel
+     name: python3 gcc python3-devel
      state: present
   - name: create roboshop system user
     ansible.builtin.user:
